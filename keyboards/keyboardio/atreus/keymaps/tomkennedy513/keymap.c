@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NUM] = LAYOUT(
         KC_P1,   KC_P2,   KC_P3,   KC_P4,   KC_P5,                        LCTL(LSFT(KC_TAB)), KC_PGDN, KC_PGUP, LCTL(KC_TAB), KC_NO,
         KC_P6,   KC_P7,   KC_P8,   KC_P9,   KC_P0,                        KC_LEFT,            KC_DOWN, KC_UP,   KC_RGHT,      KC_NO,
-        KC_NO,   KC_NO,   KC_NO,   KC_NO,   TO(_MAIN), KC_TRNS,  KC_TRNS, KC_NO,              KC_NO,   KC_NO,   KC_NO,        KC_NO,
+        KC_NO,   KC_NO,   KC_NO,   KC_NO,   TO(_MAIN), KC_TRNS,  KC_TRNS, KC_NO,              KC_NO,   KC_COMM, KC_DOT,       KC_NO,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   TO(_SYM), KC_NO,   KC_TRNS,            KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS),
 
     [_FN] = LAYOUT(
@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 const uint16_t PROGMEM esc_combo[] = {OSL(_SYM), OSL(_NUM), COMBO_END};
-const uint16_t PROGMEM tab_combo[] = {KC_BSPC, KC_SPC, COMBO_END};
+const uint16_t PROGMEM tab_combo[] = {KC_BSPC, SFT_T(KC_SPC), COMBO_END};
 combo_t key_combos[] = {
     COMBO(esc_combo, KC_ESC),
     COMBO(tab_combo, KC_TAB),
